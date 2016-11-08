@@ -19,11 +19,10 @@ import javax.annotation.Resource;
 public class TestMyBatis {
     private Logger logger = Logger.getLogger(TestMyBatis.class);
 
-    @Resource
-    private UserService UserService;
+    private UserService userService = new UserService();
 
     @Test
     public void test() {
-        logger.info(UserService.getUserById(1).toString());
+        logger.info(userService.getUserById(1).getName());
     }
 }
